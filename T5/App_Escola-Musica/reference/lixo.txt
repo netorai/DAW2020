@@ -1,0 +1,66 @@
+https://pastebin.com/2Bt9E8aA
+
+1. Registos sobre o RODA;
+2. Registos ordenados por:
+        a. ordem descendente de ano;
+        b. ordem ascendente de título.
+
+3. Registos ordenados por:
+        a. ordem ascendente de type;
+        b. ordem descendente de year;
+        c. ordem ascendente de title.
+
+s2.
+    http://localhost:3000/pubs?_sort=year,title&_order=desc,asc
+
+
+Na app da escola de música vamos inserir um  aluno:
+
+{
+    "id": "A44555",
+    "nome": "Ana Margarida Leite",
+    "dataNasc": "1981-4-19",
+    "curso": "CB8",
+    "anoCurso": "1",
+    "instrumento": "Guitarra"
+  }
+
+  {
+    "id": "A44555",
+    "nome": "José Pedro Alves",
+    "dataNasc": "1985-4-19",
+    "curso": "CB1",
+    "anoCurso": "2",
+    "instrumento": "Clarinete"
+  }
+
+  Vamos alterar o registo do José Pedro...
+
+  {
+      "id": "A77818",
+   "nome": "José Pedro Alves",
+    "dataNasc": "1985-4-19",
+    "curso": "CB8",
+    "anoCurso": "2",
+    "instrumento": "Guitarra"
+  }
+
+  Tentar o PUT com um id inexistente:
+{
+      "id": "X77818",
+   "nome": "José Pedro Alves",
+    "dataNasc": "1985-4-19",
+    "curso": "CB8",
+    "anoCurso": "2",
+    "instrumento": "Guitarra"
+  }
+
+A fazer:
+    - servidor node que responde em localhost:3001
+    - Aos pedidos:
+        / - index.html
+                Lista de alunos (link para o json-server)
+                    - Responde com uma lista HTML com a lista de alunos
+                    - Cada item é um link para o nosso servidor solicitando a informação do aluno
+                Lista de cursos (link para o json-server)
+                Lista de instrumentos (link para o json-server)
